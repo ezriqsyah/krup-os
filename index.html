@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#020814">
+<title>KRUP | Stay KRUP</title>
+<style>
+:root{--bg:#020814;--panel:#07162d;--yellow:#ffd21c;--muted:#c8d2e4;--green:#25d366}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:#fff;background:radial-gradient(circle at 50% -10%,#1454db55,transparent 36%),radial-gradient(circle at 90% 30%,#ffd21c20,transparent 28%),var(--bg);font-family:Arial,Helvetica,sans-serif}a{color:inherit}.wrap{width:min(100%,520px);margin:auto;padding:0 16px 40px}.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:28px 0;position:relative}.halo{position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,#ffd21c2b,transparent 64%);animation:pulse 3.5s ease-in-out infinite}@keyframes pulse{0%,100%{transform:scale(.92);opacity:.7}50%{transform:scale(1.08);opacity:1}}.logo{width:min(83vw,390px);aspect-ratio:1;border-radius:50%;object-fit:cover;border:3px solid var(--yellow);box-shadow:0 22px 60px #0008,0 0 35px #ffd21c24;z-index:2}.eyebrow{margin-top:24px;color:var(--yellow);font-size:12px;font-weight:900;letter-spacing:3px;text-transform:uppercase;z-index:2}h1{margin:8px 0 3px;font-size:clamp(42px,12vw,68px);line-height:.92;letter-spacing:-3px;font-style:italic;font-weight:1000;z-index:2}h1 span{color:var(--yellow)}.tag{margin:9px 0 25px;color:var(--muted);font-weight:900;letter-spacing:2px;text-transform:uppercase;font-size:14px;z-index:2}.actions{width:100%;display:grid;gap:11px;z-index:2}.btn{min-height:58px;border-radius:17px;display:flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;font-size:16px;font-weight:950;border:1px solid transparent}.main{color:#061329;background:linear-gradient(135deg,var(--yellow),#ffb800);box-shadow:0 14px 35px #ffbf0038}.ghost{background:#ffffff12;border-color:#ffffff26}.scroll{margin-top:25px;color:#9aabc5;font-size:12px;letter-spacing:1.8px;text-transform:uppercase;z-index:2}section{margin:20px 0}.panel{border:1px solid #ffffff1a;background:linear-gradient(150deg,#0b2345eb,#041124f5);border-radius:25px;overflow:hidden;box-shadow:0 20px 45px #0004}.head{padding:23px 22px 15px}.kicker{color:var(--yellow);font-size:11px;letter-spacing:2.4px;font-weight:900;text-transform:uppercase}h2{margin:7px 0 0;font-size:29px;line-height:1.02;letter-spacing:-1px}.video{position:relative;background:#000;margin:0 14px 14px;border-radius:19px;overflow:hidden}video{width:100%;display:block;max-height:72svh;background:#000}.sound{position:absolute;top:12px;right:12px;z-index:4;border:0;background:#000c;color:#fff;border-radius:999px;padding:10px 13px;font-weight:900}.caption{padding:5px 21px 23px}.stars{color:var(--yellow);letter-spacing:3px}.quote{margin:9px 0 0;font-size:20px;font-weight:900;line-height:1.28}.tiny{color:#9fb0c9;font-size:12px;line-height:1.55}.grid{display:grid;grid-template-columns:1fr 1fr;gap:11px;padding:0 14px 14px}.card{min-height:128px;padding:17px;border-radius:18px;background:#ffffff0e;border:1px solid #ffffff14}.card .ico{font-size:27px}.card b{display:block;margin-top:11px;font-size:14px;color:var(--yellow);text-transform:uppercase}.card p{margin:6px 0 0;color:var(--muted);font-size:12px;line-height:1.45}.menu,.visit{display:grid;gap:10px;padding:0 14px 14px}.item{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px;border-radius:17px;background:#ffffff0e;border:1px solid #ffffff14}.item strong{display:block;font-size:15px}.item small{color:#9fb0c9}.price{color:var(--yellow);font-size:19px;font-weight:950;white-space:nowrap}.address{border-radius:18px;background:#ffffff0e;padding:17px;border:1px solid #ffffff14;line-height:1.55;color:var(--muted);font-size:13px}.address strong{color:#fff;display:block;font-size:16px;margin-bottom:5px}footer{text-align:center;padding:31px 0 10px;color:#7f90aa;font-size:11px;letter-spacing:1px}.float{position:fixed;z-index:30;bottom:18px;right:18px;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:var(--green);text-decoration:none;font-size:27px;box-shadow:0 16px 40px #0006;border:3px solid #ffffff40}
+
+.btn,button{font-family:inherit;cursor:pointer}
+.modal-backdrop{position:fixed;inset:0;background:#000c;backdrop-filter:blur(10px);z-index:90;display:none;align-items:flex-end;justify-content:center;padding:14px}
+.modal-backdrop.show{display:flex}
+.modal{width:min(100%,500px);max-height:92svh;overflow:auto;background:linear-gradient(160deg,#0b2345,#031024);border:1px solid #ffffff24;border-radius:26px 26px 20px 20px;padding:23px;box-shadow:0 30px 80px #000a;position:relative}
+.close{position:absolute;right:14px;top:14px;width:40px;height:40px;border-radius:50%;border:1px solid #ffffff22;background:#ffffff10;color:#fff;font-size:22px}
+.reward{display:inline-flex;align-items:center;gap:8px;color:#061329;background:var(--yellow);border-radius:999px;padding:8px 12px;font-size:12px;font-weight:950}
+.modal h3{font-size:31px;line-height:1;margin:18px 0 8px}
+.modal-sub{color:var(--muted);line-height:1.5;margin:0 0 18px}
+.form{display:grid;gap:13px}
+.field label{display:block;color:#dce5f4;font-weight:800;font-size:13px;margin:0 0 7px}
+.field input{width:100%;min-height:52px;border-radius:14px;border:1px solid #ffffff22;background:#ffffff0c;color:#fff;padding:0 14px;font-size:16px;outline:none}
+.field input:focus{border-color:var(--yellow);box-shadow:0 0 0 3px #ffd21c22}
+.consent{display:flex;gap:10px;align-items:flex-start;color:#b9c6d9;font-size:12px;line-height:1.45}
+.consent input{margin-top:3px}
+.submit{width:100%;border:0;margin-top:3px}
+.form-message{min-height:20px;font-size:13px;text-align:center;color:#ffdb55}
+.voucher-box{display:none;text-align:center;background:#ffffff0b;border:1px dashed #ffd21c88;border-radius:18px;padding:18px;margin-top:15px}
+.voucher-box.show{display:block}
+.voucher-code{font-size:27px;font-weight:1000;letter-spacing:2px;color:var(--yellow);margin:7px 0}
+.voucher-note{color:#c7d2e3;font-size:12px;line-height:1.5}
+
+</style>
+</head>
+<body>
+<main class="wrap">
+<section class="hero">
+<div class="halo"></div>
+<img class="logo" src="assets/krup-logo.jpeg" alt="Logo KRUP">
+<div class="eyebrow">Pisang Goreng Premium</div>
+<h1>STAY <span>KRUP</span></h1>
+<p class="tag">Rangup Lebih Lama.</p>
+<div class="actions">
+<button class="btn main order-trigger" type="button">💬 ORDER SEKARANG</button>
+<a class="btn ghost" href="#review">▶ TENGOK FEEDBACK CUSTOMER</a>
+</div>
+<div class="scroll">Scroll untuk KRUP Experience ↓</div>
+</section>
+
+<section id="review" class="panel">
+<div class="head"><div class="kicker">Real customer. Real review.</div><h2>Apa kata customer?</h2></div>
+<div class="video">
+<video id="v" muted playsinline controls preload="metadata" poster="assets/customer-feedback-poster.jpg">
+<source src="assets/customer-feedback.mp4" type="video/mp4">
+</video>
+<button class="sound" id="sound">🔊 Tekan untuk bunyi</button>
+</div>
+<div class="caption">
+<div class="stars">★★★★★</div>
+<p class="quote">“Saya makan lepas 12 jam pun masih rangup! 😍”</p>
+<p class="quote">“Saya beli petang, lepas tu makan tengah malam pun masih rangup! 🤯🔥”</p>
+<p class="tiny">Tekan video untuk dengar feedback penuh customer KRUP.</p>
+</div>
+</section>
+
+<section class="panel">
+<div class="head"><div class="kicker">Kenapa pilih KRUP?</div><h2>Kerangupan yang tahan lebih lama.</h2></div>
+<div class="grid">
+<div class="card"><div class="ico">🍌</div><b>Premium Ingredients</b><p>Kami memilih bahan berkualiti supaya setiap hidangan memenuhi standard KRUP.</p></div>
+<div class="card"><div class="ico">✨</div><b>Dibuat Setiap Hari</b><p>Disediakan setiap hari bagi memastikan rasa dan kualiti sentiasa terjaga.</p></div>
+<div class="card"><div class="ico">🧀</div><b>Topping padu</b><p>Coklat dan cheese penuh pada setiap box.</p></div>
+<div class="card"><div class="ico">⚡</div><b>Stay KRUP</b><p>Kekal rangup ialah standard kami.</p></div>
+</div>
+</section>
+
+<section class="panel">
+<div class="head"><div class="kicker">Pilihan menu</div><h2>Pilih kegemaran anda.</h2></div>
+<div class="menu">
+<div class="item"><div><strong>Mini Choc Cheese</strong><small>Rangup, coklat & cheese</small></div><div class="price">RM10</div></div>
+<div class="item"><div><strong>Medium Choc Cheese</strong><small>Untuk kongsi… atau tak</small></div><div class="price">RM20</div></div>
+<div class="item"><div><strong>Tornado Mini</strong><small>Cream cheese, coklat & cheese</small></div><div class="price">RM15</div></div>
+<div class="item"><div><strong>Tornado Medium</strong><small>Full topping experience</small></div><div class="price">RM30</div></div>
+</div>
+</section>
+
+<section class="panel">
+<div class="head"><div class="kicker">Jumpa kami</div><h2>KRUP Mutiara Rini.</h2></div>
+<div class="visit">
+<div class="address"><strong>📍 Berhadapan 99 Speedmart</strong>99 Speedmart 2635 (JH) Taman Mutiara Rini 2, No. 1, Jalan Jasa 25, 81300 Pulai, Johor</div>
+<a class="btn main" href="https://www.google.com/maps/search/?api=1&query=99%20Speedmart%202635%20%28JH%29%20Taman%20Mutiara%20Rini%202%2C%20No.%201%2C%20Jalan%20Jasa%2025%2C%2081300%20Pulai%2C%20Johor" target="_blank">BUKA GOOGLE MAPS</a>
+<a class="btn ghost" href="https://www.tiktok.com/@krupofficial?is_from_webapp=1&sender_device=pc" target="_blank">♪ FOLLOW @KRUPOFFICIAL</a>
+</div>
+</section>
+<footer>SEKALI KRUP, NAK LAGI. · KRUP © 2026</footer>
+</main>
+
+<div class="modal-backdrop" id="clubModal" role="dialog" aria-modal="true" aria-labelledby="clubTitle">
+<div class="modal">
+<button class="close" id="closeModal" type="button" aria-label="Tutup">×</button>
+<div class="reward">🎁 WELCOME REWARD · RM2 OFF</div>
+<h3 id="clubTitle">Sertai KRUP Club</h3>
+<p class="modal-sub">Daftar nama, nombor telefon dan tarikh lahir. Voucher sah sekali untuk pembelian minimum RM15.</p>
+<form class="form" id="clubForm">
+<div class="field"><label for="memberName">Nama</label><input id="memberName" autocomplete="name" minlength="2" required placeholder="Contoh: Aina"></div>
+<div class="field"><label for="memberPhone">Nombor telefon</label><input id="memberPhone" inputmode="tel" autocomplete="tel" required placeholder="Contoh: 01160616135"></div>
+<div class="field"><label for="memberBirthday">Tarikh lahir</label><input id="memberBirthday" type="date" required></div>
+<label class="consent"><input id="memberConsent" type="checkbox" checked><span>Saya bersetuju menerima promosi, ganjaran hari lahir dan berita KRUP melalui nombor telefon ini.</span></label>
+<button class="btn main submit" id="joinBtn" type="submit">DAFTAR & DAPATKAN RM2 OFF</button>
+<div class="form-message" id="formMessage"></div>
+</form>
+<div class="voucher-box" id="voucherBox">
+<div>Ahli KRUP Club berjaya didaftarkan 🎉</div>
+<div class="voucher-code" id="voucherCode"></div>
+<div class="voucher-note">Tunjukkan kod ini semasa membuat pesanan. Sah sekali sahaja dengan minimum pembelian RM15.</div>
+<button class="btn main submit" id="continueWhatsapp" type="button" style="margin-top:15px">TERUSKAN KE WHATSAPP</button>
+</div>
+</div>
+</div>
+
+<button class="float order-trigger" type="button" aria-label="Order KRUP">💬</button>
+<script>
+const SUPABASE_URL="https://hgbjydrwpgtzyhyvnxiq.supabase.co";
+const SUPABASE_KEY="sb_publishable_Eqy8LclQ0Tnt0L3EVmg2Uw_BNfQw46N";
+const BASE_WHATSAPP="https://wa.me/601160616135";
+
+const v=document.getElementById('v'),b=document.getElementById('sound');
+b.onclick=async()=>{v.muted=false;try{await v.play()}catch(e){}b.textContent='🔊 Bunyi dibuka';setTimeout(()=>b.style.display='none',1000)};
+v.addEventListener('play',()=>{if(!v.muted)b.style.display='none'});
+
+const modal=document.getElementById('clubModal');
+const form=document.getElementById('clubForm');
+const joinBtn=document.getElementById('joinBtn');
+const message=document.getElementById('formMessage');
+const voucherBox=document.getElementById('voucherBox');
+const voucherCode=document.getElementById('voucherCode');
+let registration=null;
+
+document.querySelectorAll('.order-trigger').forEach(btn=>btn.addEventListener('click',()=>{modal.classList.add('show');document.body.style.overflow='hidden'}));
+const hideModal=()=>{modal.classList.remove('show');document.body.style.overflow=''};
+document.getElementById('closeModal').onclick=hideModal;
+modal.addEventListener('click',e=>{if(e.target===modal)hideModal()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')hideModal()});
+
+form.addEventListener('submit',async e=>{
+e.preventDefault();
+message.textContent='';
+joinBtn.disabled=true;
+joinBtn.textContent='MENDAFTAR...';
+const payload={
+p_name:document.getElementById('memberName').value.trim(),
+p_phone:document.getElementById('memberPhone').value.trim(),
+p_birthday:document.getElementById('memberBirthday').value,
+p_consent:document.getElementById('memberConsent').checked
+};
+try{
+const response=await fetch(`${SUPABASE_URL}/rest/v1/rpc/register_krup_member`,{
+method:'POST',
+headers:{'Content-Type':'application/json','apikey':SUPABASE_KEY,'Authorization':`Bearer ${SUPABASE_KEY}`},
+body:JSON.stringify(payload)
+});
+const result=await response.json();
+if(!response.ok)throw new Error(result.message||'Pendaftaran tidak berjaya.');
+if(result.already_registered){message.textContent='Nombor ini sudah berdaftar sebagai ahli KRUP Club.';return}
+registration={name:payload.p_name,phone:payload.p_phone,voucher:result.voucher_code,memberId:result.member_id};
+form.style.display='none';
+voucherCode.textContent=result.voucher_code;
+voucherBox.classList.add('show');
+}catch(err){message.textContent=err.message||'Ada masalah sambungan. Cuba sekali lagi.'}
+finally{joinBtn.disabled=false;joinBtn.textContent='DAFTAR & DAPATKAN RM2 OFF'}
+});
+
+document.getElementById('continueWhatsapp').onclick=()=>{
+if(!registration)return;
+const text=['Hai KRUP! Saya nak order pisang goreng cheese.','',`Nama: ${registration.name}`,`No. Telefon: ${registration.phone}`,`Member ID: ${registration.memberId}`,`Voucher RM2 OFF: ${registration.voucher}`].join('\n');
+window.open(`${BASE_WHATSAPP}?text=${encodeURIComponent(text)}`,'_blank');
+};
+</script>
+</body>
+</html>
